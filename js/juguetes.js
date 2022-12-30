@@ -3,6 +3,7 @@ async function getData() {
     let response = await fetch("https://apipetshop.herokuapp.com/api/articulos");
     let art = await response.json();
     let articulos = art.response;
+    console.log("articulos",articulos);
     let cardContainer = document.getElementById("card-container");
 
     let checkbox = document.getElementById("checkbox");
