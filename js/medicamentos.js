@@ -83,6 +83,13 @@ async function getData() {
 
             boton.classList.add("btn-success");
             boton.innerText = "Agregado a Carrito";
+
+            Swal.fire({
+              icon: 'success',
+              title: '¡Guau!',
+              text: 'El producto se agregó correctamente al carrito',
+              footer: '<a href="./carrito.html">Ver mi compra...</a>'
+            })
           }
         });
       });
@@ -97,7 +104,7 @@ async function getData() {
           <div class="col">
             <div class="card h-100 m-auto js-card" id="${data._id}">
               <img src="${data.imagen}">
-                <div class="card-body ">
+                <div class="card-body d-flex flex-column justify-content-around">
                 <h5 class="card-title">${data.nombre}</h5>
                 <div class="d-flex justify-content-center w-100">
                   <div class="p-2 border border-info rounded-pill my-2">Precio: $${data.precio}</div>

@@ -7,6 +7,10 @@
   --blanco: #f5f7fb;
 }
 
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .btn-brand {
   border: none;
   background-color: var(--color-terciario);
