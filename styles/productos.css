@@ -10,6 +10,10 @@
   --celeste: #58edf5;
 }
 
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .btn-cart {
   border-radius: 2px 2px 0% 0%;
 }

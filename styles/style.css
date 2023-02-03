@@ -9,6 +9,10 @@
     --blanco: #f5f7fb;
   }
 
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /* ----------- HEADER -------------------- */
 
 .logo {
