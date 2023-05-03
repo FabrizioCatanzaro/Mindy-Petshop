@@ -2,6 +2,7 @@ async function getData() {
   try {
     let response = await fetch("../data/articulos.json");
     let articulos = await response.json();
+    console.log(articulos);
     let cardContainer = document.getElementById("card-container");
 
     let checkbox = document.getElementById("checkbox");
