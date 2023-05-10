@@ -1,7 +1,7 @@
 import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
 
 async function getData() {
-  await axios.get("http://localhost:7500/api/articulos")
+  await axios.get("https://projects-back.up.railway.app/api/mindy")
     .then(response => {
       let articulos = response.data.res
       let cardContainer = document.getElementById("card-container");
