@@ -2,7 +2,7 @@ async function getData() {
   try {
     const response = await fetch("./data/articulos.json"); // Ruta al archivo JSON
     const articulos = await response.json();
-    // console.log(data);
+    console.log(articulos);
 
     let cardContainer = document.getElementById("card-container");
 
