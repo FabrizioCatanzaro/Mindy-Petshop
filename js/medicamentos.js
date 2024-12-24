@@ -1,9 +1,8 @@
-import axios from 'https://cdn.jsdelivr.net/npm/axios@1.3.5/+esm';
-
 async function getData() {
-  await axios.get("https://projects-back.up.railway.app/api/mindy")
-    .then(response => {
-      let articulos = response.data.res
+  await fetch("./data/articulos.json")
+    .then(response => response.json())
+    .then(data => {
+      let articulos = data;
       let cardContainer = document.getElementById("card-container");
 
       let checkbox = document.getElementById("checkbox");
@@ -125,6 +124,7 @@ async function getData() {
     })
     .catch(err => {
       console.log(err);
-    })
+    });
 }
+
 getData();
