@@ -1,7 +1,8 @@
 async function getData() {
-  try {
-    const response = await fetch("./data/articulos.json"); // Ruta al archivo JSON
-    const articulos = await response.json();
+    await fetch("./data/articulos.json") // Ruta al archivo JSON
+    .then(response => response.json())
+    .then(data => {
+      let articulos = data
     // console.log(data);
 
     let cardContainer = document.getElementById("card-container");
@@ -122,9 +123,10 @@ async function getData() {
           </div>
       `;
     }
-  } catch (err) {
+  }) 
+  .catch (err => {
     console.log(err);
-  }
+  })
 }
 
 getData();
